@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:better_shade_button/home_page.dart';
+import 'package:better_shade_button/pages/home.dart';
 
 class BetterShadeButton extends StatelessWidget {
   // This widget is the root of your application.
@@ -8,7 +8,7 @@ class BetterShadeButton extends StatelessWidget {
     return MaterialApp(
       title: 'Better Shade Button',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomePage(title: 'Better Shade Button'),
+      home: Home(title: 'Better Shade Button'),
     );
   }
 }

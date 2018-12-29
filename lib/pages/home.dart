@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:better_shade_button/sounds.dart';
+import 'package:better_shade_button/pages/settings.dart';
 
 
-class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+class Home extends StatefulWidget {
+  Home({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  HomePageState createState() => HomePageState();
+  _HomeState createState() => _HomeState();
 }
 
-class HomePageState extends State<HomePage> {
+class _HomeState extends State<Home> {
   SoundManager soundManager = SoundManager();
 
   void _playSound() {
@@ -49,7 +50,9 @@ class HomePageState extends State<HomePage> {
             ListTile(
               title: Text('Settings'),
               onTap: () {
-                // TODO: take us to the settings
+                // Close the drawer before navigation
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
               }
             ),
           ]
